@@ -45,24 +45,15 @@ function Circle(x, y, dx, dy, radius) {
   this.minRadius = radius; //Để mỗi vòng tròn có Min riêng biệt
   this.color = colorArray[Math.floor(Math.random() * colorArray.length)]; //Để vậy thì ra 1 màu
 
-  // this.draw=function(){
-  this.draw = () => {
+  this.draw = function() {
     //ES6 JAV ADVANCED
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     // c.fillStyle=colorArray[Math.floor(Math.random()*colorArray.length)];//Để vậy màu sẽ thay đổi liên tục
     c.fillStyle = this.color;
     c.fill();
-
-    // c.beginPath();
-    // c.fillStyle = "black";
-    // c.fillText("X", this.x, this.y);
-    // c.fill();
-    // c.strokeStyle="lightblue";
-    // c.strokeStyle="#"+((1<<24)*Math.random()|0).toString(16);//led color
-    // c.stroke();
   };
-  this.update = () => {
+  this.update = function() {
     if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
       this.dx = -this.dx;
     }
@@ -93,16 +84,6 @@ function Circle(x, y, dx, dy, radius) {
   };
 }
 
-// var x=200;
-// var x=Math.random() * innerWidth;//random pốition
-// // var y=200;
-// var y=Math.random()*innerHeight;
-// // var dx=10;
-// var dx=(Math.random() - 0.5)*10;//để dx có thể âm hoặc dương
-// //nếu ko thì sẽ chỉ từ phải qua và trên xuống
-// // var dy=10;
-// var dy=(Math.random() -0.5)*10;
-// var radius=30;
 var circleArray = [];
 
 for (let i = 0; i < 100; i++) {

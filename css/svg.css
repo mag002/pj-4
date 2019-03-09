@@ -67,7 +67,7 @@ a:hover svg rect {
   stroke-width: 4px;
   fill: transparent;
   transition: 1s;
-  stroke-dasharray: calc(3.14 * 15);
+  stroke-dasharray: calc(3.14 * 30 / 2);
   /* stroke-dashoffset: 100%; */
 
   animation: screenLoading ease-out 1s infinite forwards alternate;

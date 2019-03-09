@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <style>
+      .flip-card {
+        height: 475px;
+        width: 300px;
+        border: 1px solid black;
+        margin: auto;
+      }
+      .flip-inner {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        transition: all 0.5s;
+        background: lightgrey;
+        transform-style: preserve-3d;
+      }
+      .flip-card:hover .flip-inner {
+        transform: rotateY(180deg);
+      }
+      .flip-front,
+      .flip-back {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .flip-front {
+        background: lightblue;
+      }
+      .flip-back {
+        background: lightseagreen;
+        transform: rotateY(180deg);
+      }
+    </style>
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          front
+        </div>
+        <div class="flip-back">
+          back
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
